@@ -1,4 +1,4 @@
 # ignore folder
-/node_modulesit/
+node_modules/
 # ignore file
 package-lock.json
