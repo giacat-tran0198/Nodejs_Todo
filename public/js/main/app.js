@@ -12,7 +12,7 @@ app.controller("todoController", ["$scope", "svTodos", ($scope, $svTodos) => {
         $scope.loading = false;
     });
 
-    $scope.createTodo = function () {
+    $scope.createTodo = () => {
         $scope.loading = true;
         var todo = {
             text: $scope.formData.text,
@@ -26,14 +26,14 @@ app.controller("todoController", ["$scope", "svTodos", ($scope, $svTodos) => {
         })
 
     }
-    $scope.updateTodo = function (todo) {
+    $scope.updateTodo = (todo) => {
         $scope.loading = true;
         $svTodos.update(todo).then((data)=>{
             $scope.todos = data.data;
             $scope.loading = false;
         })
     }
-    $scope.deleteTodo = function (todo) {
+    $scope.deleteTodo = (todo) => {
         $scope.loading = true;
         $svTodos.delete(todo._id).then((data)=>{
             $scope.todos = data.data;

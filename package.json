@@ -4,7 +4,7 @@
   "description": "single page todo application with Nodejs and angular",
   "main": "app.js",
   "scripts": {
-    "run": "nodemon"
+    "start": "nodemon"
   },
   "author": "Quoc Gia Cat TRAN",
   "license": "ISC",

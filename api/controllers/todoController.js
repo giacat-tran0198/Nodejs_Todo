@@ -1,6 +1,6 @@
 var Todos = require("../models/todoModel");
 
-function getTodos(res) {
+var getTodos = (res) => {
     Todos.find((err, todos) => {
         if (err) {
             res.status(500).json(err);
@@ -10,7 +10,7 @@ function getTodos(res) {
     })
 }
 
-module.exports = function (app) {
+module.exports = (app) => {
     // get all todos
     app.get('/api/todos', (req, res) => {
         getTodos(res);

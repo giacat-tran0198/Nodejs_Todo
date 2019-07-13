@@ -2,16 +2,16 @@ var app = angular.module("app.todos")
 app.factory("svTodos", ["$http", ($http) => {
 
     return {
-        get: function () {
+        get: () => {
             return $http.get("/api/todos");
         },
-        create: function (todoData) {
+        create: (todoData) => {
             return $http.post("/api/todo", todoData);
         },
-        update: function (todoData) {
+        update: (todoData) => {
             return $http.put("/api/todo", todoData);
         },
-        delete: function (id) {
+        delete: (id) => {
             return $http.delete("/api/todo/"+id);
         }
     }

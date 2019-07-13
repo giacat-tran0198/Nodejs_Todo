@@ -1,6 +1,6 @@
 var Todos = require("../models/todoModel");
 
-module.exports = function (app) {
+module.exports = (app) => {
 
     app.get("/api/setupTodos", (req, res) => {
 
